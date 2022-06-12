@@ -1,0 +1,38 @@
+<project name="banking" default="savings">
+<echo message="welcome to banking"/>
+<property file="C:/Users/sreekanth.giraka/OneDrive - Covalense Digital Solutions Private Limited/Desktop/local.properties.txt"/>
+
+<property name="wife" location="${ram}"/>
+<echo message="rama's wife  is ${wife}"/>
+
+<property name="javapath" location="${java.path}"/>
+<echo message="${javapath}"/>
+
+<property name="patch" value=""/>
+<echo message="patch value is ${patch}"/>
+
+<property name="oracle" location="${oracle.path}"/>
+<echo message="oraclepath is ${oracle}"/>
+
+
+
+
+
+
+<property name="release" value=""/>
+<echo message="release value is ${release}"/>
+
+
+<target name="savings" depends="loans">
+<echo message="welcome to savings section"/>
+<echo message="patch value is ${patch}"/>
+</target>
+<target name="loans" depends="creditcard">
+<echo message="welcome to loans section"/>
+<echo message="release value is ${release}"/>
+</target>
+<target name="creditcard">
+<echo message="welcome to creditcard"/>
+</target>
+<echo message="welcome to banking end"/>
+</project>
